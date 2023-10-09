@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { IconButton } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
+import { Link } from "react-router-dom";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -17,11 +17,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const CartWidget = () => {
   return (
-    <IconButton aria-label="cart">
+    <Link to="/cart">
       <StyledBadge badgeContent={3} color="secondary">
         <ShoppingCartIcon sx={{ fontSize: "35px", color: "white" }} />
       </StyledBadge>
-    </IconButton>
+    </Link>
   );
 };
 

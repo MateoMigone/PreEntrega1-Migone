@@ -1,0 +1,10 @@
+.logo {
+  margin-right: 2px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}

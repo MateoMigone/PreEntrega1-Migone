@@ -1,7 +1,7 @@
-import "./footer.css";
-
 const Footer = () => {
-  return <footer>GRACIAS POR TU VISITA, NOS VEMOS PRONTO!</footer>;
+  return (
+    <div className="footer-div">GRACIAS POR TU VISITA, NOS VEMOS PRONTO!</div>
+  );
 };
 
 export default Footer;
