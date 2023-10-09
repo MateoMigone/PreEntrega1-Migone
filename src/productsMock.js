@@ -8,7 +8,7 @@ export const products = [
     stock: 15,
     description:
       "Camiseta suplente que usó la selección Argentina durante el mundial de México 1986",
-    category: "Sudamerica",
+    category: "sudamerica",
     img: Image,
   },
   {
@@ -18,7 +18,7 @@ export const products = [
     stock: 20,
     description:
       "Camiseta titular que usó el FC Barcelona en la temporada 2006/07",
-    category: "Europa",
+    category: "europa",
     img: "https://i.ebayimg.com/images/g/IEQAAOSw0hBggXiV/s-l1600.jpg",
   },
   {
@@ -27,7 +27,7 @@ export const products = [
     price: 25000,
     stock: 10,
     description: "Camiseta titular que usó el Arsenal en la temporada 2002/03",
-    category: "Europa",
+    category: "europa",
     img: "https://lamaquinaretro.com.ar/wp-content/uploads/2022/05/ars.jpg",
   },
   {
@@ -37,7 +37,7 @@ export const products = [
     stock: 15,
     description:
       "Camiseta manga larga titular que usó el Milan en la temporada 2006/07",
-    category: "Europa",
+    category: "europa",
     img: "https://cf.camisetasfutbol.com.cn/upload/ttmall/img/20210325/655232424993d97b26381ef964f80c20.png",
   },
   {
@@ -47,7 +47,7 @@ export const products = [
     stock: 18,
     description:
       "Camiseta titular que usó el Manchester United en la temporada 2007/08",
-    category: "Europa",
+    category: "europa",
     img: "https://tecalzoshoes.com/wp-content/uploads/2023/07/4A2395B9-A3EB-4C9A-BB80-8DB1A3AC6752.jpeg",
   },
   {
@@ -57,7 +57,7 @@ export const products = [
     stock: 20,
     description:
       "Camiseta titular que usó River Plate campeón de la copa libertadores en 1996",
-    category: "Sudamerica",
+    category: "sudamerica",
     img: "https://trizop.com/wp-content/uploads/2021/04/riverplate-9596-retro-trizop-1.webp",
   },
   {
@@ -67,7 +67,7 @@ export const products = [
     stock: 20,
     description:
       "Camiseta titular que usó River Plate campeón de la copa libertadores en 1986",
-    category: "Sudamerica",
+    category: "sudamerica",
     img: "https://cdn.shopify.com/s/files/1/0567/2907/5873/products/WhatsAppImage2021-05-13at14.25.58.jpg",
   },
   {
@@ -77,7 +77,7 @@ export const products = [
     stock: 15,
     description:
       "Camiseta titular que usó el Real Madrid en la temporada 2010/11",
-    category: "Europa",
+    category: "europa",
     img: "https://www.merchandisingplaza.ca/101076/2/Jerseys-Real-Madrid-2010-11-Real-Madrid-Adidas-Champions-League-Home-Shirt-l.jpg",
   },
 ];

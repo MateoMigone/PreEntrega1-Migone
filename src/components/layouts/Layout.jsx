@@ -5,17 +5,17 @@ import "./layout.css";
 
 const Layout = () => {
   return (
-    <body>
-      <header style={{ height: "10vh" }}>
+    <>
+      <header>
         <NavBarContainer />
       </header>
-      <main style={{ minHeight: "80vh" }}>
+      <main>
         <Outlet />
       </main>
-      <footer style={{ height: "10vh" }}>
+      <footer>
         <FooterContainer />
       </footer>
-    </body>
+    </>
   );
 };
 

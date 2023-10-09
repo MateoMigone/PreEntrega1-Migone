@@ -11,8 +11,6 @@ import CartWidgetContainer from "../../common/cartWidget/CartWidgetContainer";
 import { Link } from "react-router-dom";
 import "./navBar.css";
 
-const pages = ["todos", "sudamerica", "europa"];
-
 const NavBar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#1d9e49" }}>
@@ -44,9 +42,8 @@ const NavBar = () => {
               marginRight: "100px",
             }}
           >
-            {pages.map((page) => (
+            <Link to="/">
               <Button
-                key={page}
                 sx={{
                   my: 2,
                   color: "white",
@@ -54,9 +51,36 @@ const NavBar = () => {
                   fontSize: { sm: "9px", md: "12px", lg: "18px" },
                 }}
               >
-                {page}
+                {" "}
+                Todos{" "}
               </Button>
-            ))}
+            </Link>
+            <Link to="/category/sudamerica">
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: { sm: "9px", md: "12px", lg: "18px" },
+                }}
+              >
+                {" "}
+                Sudamérica{" "}
+              </Button>
+            </Link>
+            <Link to="/category/europa">
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: { sm: "9px", md: "12px", lg: "18px" },
+                }}
+              >
+                {" "}
+                Europa{" "}
+              </Button>
+            </Link>
           </Box>
           <CartWidgetContainer />
         </Toolbar>
