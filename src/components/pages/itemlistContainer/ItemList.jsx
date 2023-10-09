@@ -1,4 +1,3 @@
-import React from "react";
 import ProductCardContainer from "../../common/productCard/ProductCardContainer";
 import "./itemList.css";
 
