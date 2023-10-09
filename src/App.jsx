@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LayoutContainer from "./components/layouts/LayoutContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import ItemListContainer from "./components/pages/itemlist/ItemListContainer";
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
 
           <Route path="*" element={<h1>Not found</h1>} />
         </Route>
