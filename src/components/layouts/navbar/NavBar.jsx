@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AppBar,
   Box,
@@ -8,13 +7,13 @@ import {
   Button,
 } from "@mui/material";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
-import CartWidget from "../../common/cartWidget/CartWidget";
+import CartWidgetContainer from "../../common/cartWidget/CartWidgetContainer";
 
-const pages = ["sobre nosotros", "productos", "galeria de fotos"];
+const pages = ["todos", "sudamerica", "europa"];
 
 const NavBar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "#1d9e49" }}>
       <Container maxWidth="none">
         <Toolbar disableGutters>
           <Typography
@@ -61,7 +60,7 @@ const NavBar = () => {
               </Button>
             ))}
           </Box>
-          <CartWidget />
+          <CartWidgetContainer />
         </Toolbar>
       </Container>
     </AppBar>

@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 import { IconButton } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -8,9 +7,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: 3,
     top: 5,
-    border: `4px solid #1976d2`,
+    border: `4px solid #1d9e49`,
     borderRadius: "20px",
-    backgroundColor: "secondary",
+    backgroundColor: "#1976d2",
     padding: "10px 6px",
     fontSize: "16px",
   },

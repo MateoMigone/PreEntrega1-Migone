@@ -1,26 +1,21 @@
-import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { products } from "../../../productsMock";
+import ItemList from "./ItemList";
 
-const ItemListContainer = ({ greeting }) => {
-  return (
-    <Grid container columns={12} justifyContent={"center"}>
-      <Grid
-        item
-        xs={6}
-        boxShadow={4}
-        p={3}
-        mt={3}
-        sx={{ backgroundColor: "#add8e6", textAlign: "center" }}
-      >
-        <Typography
-          variant="h4"
-          sx={{ fontFamily: "inherit", color: "inherit" }}
-        >
-          {greeting}
-        </Typography>
-      </Grid>
-    </Grid>
-  );
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const cargarItems = new Promise((resolve, reject) => {
+      products ? resolve(products) : reject("Error, no se encontraron items");
+    });
+
+    cargarItems
+      .then((res) => setItems(res))
+      .catch((error) => console.log(error));
+  }, []);
+
+  return <ItemList items={items} />;
 };
 
 export default ItemListContainer;

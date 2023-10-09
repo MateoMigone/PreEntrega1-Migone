@@ -1,3 +1,5 @@
+import Image from "./assets/arg-sup-86.jpg";
+
 export const products = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const products = [
     description:
       "Camiseta suplente que usó la selección Argentina durante el mundial de México 1986",
     category: "Camiseta",
-    img: "https://http2.mlstatic.com/D_748674-MLA44184283584_112020-F.jpg",
+    img: Image,
   },
   {
     id: 2,
@@ -49,7 +51,7 @@ export const products = [
     img: "https://tecalzoshoes.com/wp-content/uploads/2023/07/4A2395B9-A3EB-4C9A-BB80-8DB1A3AC6752.jpeg",
   },
   {
-    id: 7,
+    id: 6,
     title: "Camiseta Titular River Plate 1996",
     price: 25000,
     stock: 20,
