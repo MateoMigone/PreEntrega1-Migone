@@ -7,10 +7,14 @@ header {
 
 main {
   min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ade0be;
 }
 
 footer {
-  background-color: #0e6e36;
+  background-color: #0d572c;
   color: white;
   display: flex;
   align-items: center;

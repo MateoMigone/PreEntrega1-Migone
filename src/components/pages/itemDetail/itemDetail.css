@@ -1,0 +1,24 @@
+.item-detail-img {
+  height: 40vh;
+  width: 40vh;
+}
+
+.item-detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-detail-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.add-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}

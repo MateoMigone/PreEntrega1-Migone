@@ -1,4 +1,11 @@
-import Image from "./assets/arg-sup-86.jpg";
+import imgArgSup86 from "./assets/arg-sup-86.jpg";
+import imgBarTit06 from "./assets/barca-tit-06-07.jpg";
+import imgArsTit02 from "./assets/ars-tit-02-03.jpg";
+import imgMilTit06 from "./assets/milan-tit-06-07-manga-larga.png";
+import imgManUtdTit07 from "./assets/man-utd-tit-07-08.jpeg";
+import imgRivTit96 from "./assets/riv-tit-96.webp";
+import imgRivTit86 from "./assets/riv-tit-86.jpg";
+import imgRMaTit10 from "./assets/real-madrid-tit-10-11.jpg";
 
 export const products = [
   {
@@ -9,7 +16,7 @@ export const products = [
     description:
       "Camiseta suplente que usó la selección Argentina durante el mundial de México 1986",
     category: "sudamerica",
-    img: Image,
+    img: imgArgSup86,
   },
   {
     id: 2,
@@ -19,7 +26,7 @@ export const products = [
     description:
       "Camiseta titular que usó el FC Barcelona en la temporada 2006/07",
     category: "europa",
-    img: "https://i.ebayimg.com/images/g/IEQAAOSw0hBggXiV/s-l1600.jpg",
+    img: imgBarTit06,
   },
   {
     id: 3,
@@ -28,7 +35,7 @@ export const products = [
     stock: 10,
     description: "Camiseta titular que usó el Arsenal en la temporada 2002/03",
     category: "europa",
-    img: "https://lamaquinaretro.com.ar/wp-content/uploads/2022/05/ars.jpg",
+    img: imgArsTit02,
   },
   {
     id: 4,
@@ -38,7 +45,7 @@ export const products = [
     description:
       "Camiseta manga larga titular que usó el Milan en la temporada 2006/07",
     category: "europa",
-    img: "https://cf.camisetasfutbol.com.cn/upload/ttmall/img/20210325/655232424993d97b26381ef964f80c20.png",
+    img: imgMilTit06,
   },
   {
     id: 5,
@@ -48,7 +55,7 @@ export const products = [
     description:
       "Camiseta titular que usó el Manchester United en la temporada 2007/08",
     category: "europa",
-    img: "https://tecalzoshoes.com/wp-content/uploads/2023/07/4A2395B9-A3EB-4C9A-BB80-8DB1A3AC6752.jpeg",
+    img: imgManUtdTit07,
   },
   {
     id: 6,
@@ -58,7 +65,7 @@ export const products = [
     description:
       "Camiseta titular que usó River Plate campeón de la copa libertadores en 1996",
     category: "sudamerica",
-    img: "https://trizop.com/wp-content/uploads/2021/04/riverplate-9596-retro-trizop-1.webp",
+    img: imgRivTit96,
   },
   {
     id: 7,
@@ -68,7 +75,7 @@ export const products = [
     description:
       "Camiseta titular que usó River Plate campeón de la copa libertadores en 1986",
     category: "sudamerica",
-    img: "https://cdn.shopify.com/s/files/1/0567/2907/5873/products/WhatsAppImage2021-05-13at14.25.58.jpg",
+    img: imgRivTit86,
   },
   {
     id: 8,
@@ -78,6 +85,6 @@ export const products = [
     description:
       "Camiseta titular que usó el Real Madrid en la temporada 2010/11",
     category: "europa",
-    img: "https://www.merchandisingplaza.ca/101076/2/Jerseys-Real-Madrid-2010-11-Real-Madrid-Adidas-Champions-League-Home-Shirt-l.jpg",
+    img: imgRMaTit10,
   },
 ];

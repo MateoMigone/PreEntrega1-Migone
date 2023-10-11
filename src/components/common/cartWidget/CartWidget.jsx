@@ -9,9 +9,10 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: 5,
     border: `4px solid #1d9e49`,
     borderRadius: "20px",
-    backgroundColor: "#1976d2",
+    backgroundColor: "secondary",
     padding: "10px 6px",
     fontSize: "16px",
+    color: "white",
   },
 }));
 
