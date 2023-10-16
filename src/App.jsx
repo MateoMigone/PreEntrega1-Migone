@@ -1,28 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LayoutContainer from "./components/layouts/LayoutContainer";
-import CartContainer from "./components/pages/cart/CartContainer";
-import ItemListContainer from "./components/pages/itemlist/ItemListContainer";
-import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
+import { BrowserRouter } from "react-router-dom";
 import { customTheme } from "./themeConfig";
 import { ThemeProvider } from "@mui/material";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={customTheme}>
-        <Routes>
-          <Route element={<LayoutContainer />}>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route
-              path="/category/:categoryName"
-              element={<ItemListContainer />}
-            />
-            <Route path="/cart" element={<CartContainer />} />
-            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-
-            <Route path="*" element={<h1>Not found</h1>} />
-          </Route>
-        </Routes>
+        <AppRouter />
       </ThemeProvider>
     </BrowserRouter>
   );
