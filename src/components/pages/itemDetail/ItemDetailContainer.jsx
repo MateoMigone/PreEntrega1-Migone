@@ -1,7 +1,8 @@
 import ItemDetail from "./ItemDetail";
-import { products } from "../../../productsMock";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
 
 const ItemDetailContainer = () => {
   const [productoSeleccionado, setProductoSeleccionado] = useState({});
@@ -9,15 +10,13 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    let productoEncontrado = products.find((product) => product.id === +id);
+    const productsCollection = collection(db, "products");
 
-    const getProductoEncontrado = new Promise((resolve, reject) => {
-      resolve(productoEncontrado);
+    let selectedDoc = doc(productsCollection, id);
+
+    getDoc(selectedDoc).then((res) => {
+      setProductoSeleccionado({ id: res.id, ...res.data() });
     });
-
-    getProductoEncontrado
-      .then((res) => setProductoSeleccionado(res))
-      .catch((err) => console.log(err));
   }, [id]);
 
   return <ItemDetail productoSeleccionado={productoSeleccionado} />;
