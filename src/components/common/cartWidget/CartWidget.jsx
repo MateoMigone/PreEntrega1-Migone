@@ -3,7 +3,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import { Link } from "react-router-dom";
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadge = styled(Badge)(() => ({
   "& .MuiBadge-badge": {
     right: 3,
     top: 5,
@@ -16,10 +16,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-const CartWidget = () => {
+const CartWidget = ({ getTotalQty }) => {
+  let totalQty = getTotalQty();
   return (
     <Link to="/cart">
-      <StyledBadge badgeContent={3} color="secondary">
+      <StyledBadge showZero badgeContent={totalQty} color="secondary">
         <ShoppingCartIcon sx={{ fontSize: "35px", color: "white" }} />
       </StyledBadge>
     </Link>

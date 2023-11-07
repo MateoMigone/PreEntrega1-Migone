@@ -1,9 +1,15 @@
 import { useContext } from "react";
-import { CartContext } from "../../../context/CartContext";
 import CartProductCard from "./CartProductCard";
+import { CartContext } from "../../../context/CartContext";
 
 const CartProductCardContainer = ({ item }) => {
-  return <CartProductCard item={item} />;
+  const { deleteProductFromCartById } = useContext(CartContext);
+  return (
+    <CartProductCard
+      item={item}
+      deleteProductFromCart={deleteProductFromCartById}
+    />
+  );
 };
 
 export default CartProductCardContainer;

@@ -43,7 +43,19 @@ const CartContextComponent = ({ children }) => {
     return total;
   };
 
-  let data = { cart, updateCart, getTotalQty, getTotalPrice };
+  const deleteProductFromCartById = (id) => {
+    let filteredArray = cart.filter((product) => product.id !== id);
+    setCart(filteredArray);
+    localStorage.setItem("cart", JSON.stringify(filteredArray));
+  };
+
+  let data = {
+    cart,
+    updateCart,
+    getTotalQty,
+    getTotalPrice,
+    deleteProductFromCartById,
+  };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

@@ -21,7 +21,7 @@ function Cart({ carrito, getTotalQty, getTotalPrice }) {
             <td>{totalQty}</td>
           </tr>
           <tr className="precio-final">
-            <td>Total</td>
+            <td>TOTAL</td>
             <td>${totalPrice}</td>
           </tr>
         </table>
