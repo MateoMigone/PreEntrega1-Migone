@@ -27,7 +27,23 @@ const CartContextComponent = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify([...cart, product]));
   };
 
-  let data = { cart, updateCart };
+  const getTotalQty = () => {
+    let total = 0;
+    cart.forEach((product) => {
+      total += product.quantity;
+    });
+    return total;
+  };
+
+  const getTotalPrice = () => {
+    let total = 0;
+    cart.forEach((product) => {
+      total += product.price * product.quantity;
+    });
+    return total;
+  };
+
+  let data = { cart, updateCart, getTotalQty, getTotalPrice };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

@@ -1,12 +1,36 @@
 import { Link } from "react-router-dom";
+import CartProductCardContainer from "../../common/cartProductCard/CartProductCardContainer";
+import "./cart.css";
+import { Button } from "@mui/material";
 
-const Cart = () => {
+function Cart({ carrito, getTotalQty, getTotalPrice }) {
+  let totalQty = getTotalQty();
+  let totalPrice = getTotalPrice();
   return (
-    <>
-      <div>Este es tu carrito de compras!</div>
-      <Link to={"/checkout"}> Ir al checkout</Link>
-    </>
+    <section className="cart-section">
+      <section className="cart-container">
+        {carrito.map((item) => (
+          <CartProductCardContainer key={item.id} item={item} />
+        ))}
+      </section>
+      <section className="cart-detail">
+        <h2>Resumen del carrito</h2>
+        <table>
+          <tr>
+            <td>Cantidad de productos</td>
+            <td>{totalQty}</td>
+          </tr>
+          <tr className="precio-final">
+            <td>Total</td>
+            <td>${totalPrice}</td>
+          </tr>
+        </table>
+        <Link to={"/checkout"} className="btn-continuar-compra">
+          <Button variant="contained">Continuar compra</Button>
+        </Link>
+      </section>
+    </section>
   );
-};
+}
 
 export default Cart;
