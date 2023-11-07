@@ -3,7 +3,7 @@ import "./itemList.css";
 
 const ItemList = ({ items }) => {
   return (
-    <section>
+    <section className="product-card">
       {items.map((item) => (
         <ProductCardContainer key={item.id} item={item} />
       ))}

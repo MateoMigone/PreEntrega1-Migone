@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Counter from "./Counter";
 
-const CounterContainer = ({ stock }) => {
+const CounterContainer = ({ stock, onAdd }) => {
   const [cantidad, setCantidad] = useState(1);
 
   const agregar = () => {
@@ -14,7 +14,14 @@ const CounterContainer = ({ stock }) => {
       ? setCantidad(cantidad - 1)
       : alert("El míninimo de unidades es 1");
   };
-  return <Counter qty={cantidad} increase={agregar} decrease={quitar} />;
+  return (
+    <Counter
+      qty={cantidad}
+      increase={agregar}
+      decrease={quitar}
+      onAdd={onAdd}
+    />
+  );
 };
 
 export default CounterContainer;

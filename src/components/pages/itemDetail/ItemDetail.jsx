@@ -3,9 +3,8 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import "./itemDetail.css";
-import { Button } from "@mui/material";
 
-const ItemDetail = ({ productoSeleccionado }) => {
+const ItemDetail = ({ productoSeleccionado, onAdd }) => {
   return (
     <Card
       sx={{
@@ -35,19 +34,7 @@ const ItemDetail = ({ productoSeleccionado }) => {
             ${productoSeleccionado.price}
           </Typography>
         </Box>
-        <Box className="add-item-container">
-          <Typography variant="overline" fontSize={"1rem"}>
-            <CounterContainer stock={productoSeleccionado.stock} />
-          </Typography>
-          <Button
-            size="large"
-            color="secondary"
-            variant="contained"
-            sx={{ color: "white" }}
-          >
-            Agregar al carrito
-          </Button>
-        </Box>
+        <CounterContainer stock={productoSeleccionado.stock} onAdd={onAdd} />
       </Box>
       <img
         src={productoSeleccionado.img}
