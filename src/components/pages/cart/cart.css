@@ -4,6 +4,25 @@
   margin: 2rem;
 }
 
+.empty-cart-container {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  border-radius: 50px;
+}
+
+.empty-cart-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.empty-cart-text h2 {
+  margin-bottom: 1.5rem;
+}
+
 .cart-container {
   display: flex;
   flex-direction: column;

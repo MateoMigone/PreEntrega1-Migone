@@ -4,14 +4,10 @@ import { CartContext } from "../../../context/CartContext";
 
 const CartContainer = () => {
   const { cart, getTotalQty, getTotalPrice } = useContext(CartContext);
+  let totalQty = getTotalQty();
+  let totalPrice = getTotalPrice();
 
-  return (
-    <Cart
-      carrito={cart}
-      getTotalQty={getTotalQty}
-      getTotalPrice={getTotalPrice}
-    />
-  );
+  return <Cart carrito={cart} totalQty={totalQty} totalPrice={totalPrice} />;
 };
 
 export default CartContainer;
