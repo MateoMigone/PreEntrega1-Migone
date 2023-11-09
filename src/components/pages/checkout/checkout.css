@@ -1,10 +1,46 @@
 .checkout-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  max-width: 30%;
 }
 
 .checkout-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 80%;
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  gap: 250px;
+}
+
+.order-container h3 {
+  display: flex;
+}
+
+.order-container h3 span {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-weight: normal;
+  color: #0d572c;
+}
+
+.order-container h3 .order-id {
+  background-color: #5bd84a71;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.order-container .home-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

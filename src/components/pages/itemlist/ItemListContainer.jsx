@@ -13,6 +13,7 @@ import { Button } from "@mui/material"; */
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  const [change, setChange] = useState(false);
 
   const { categoryName } = useParams();
 
@@ -24,6 +25,7 @@ const ItemListContainer = () => {
   }; */
 
   useEffect(() => {
+    setChange(true);
     let productsCollection = collection(db, "products");
 
     let consulta = categoryName
@@ -36,13 +38,14 @@ const ItemListContainer = () => {
       });
 
       setItems(newArray);
+      setChange(false);
     });
   }, [categoryName]);
 
   return (
     <>
       {/* <Button onClick={rellenarFirebaseDB}>Rellenar base de datos de firebase con el array de productsMock</Button> */}
-      <ItemList items={items} />
+      <ItemList items={items} categoryName={categoryName} change={change} />
     </>
   );
 };

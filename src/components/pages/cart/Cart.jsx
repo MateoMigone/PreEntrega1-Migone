@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import CartProductCardContainer from "../../common/cartProductCard/CartProductCardContainer";
 import "./cart.css";
 import { Button } from "@mui/material";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
-function Cart({ carrito, totalQty, totalPrice }) {
+function Cart({ carrito, totalQty, totalPrice, clearCart }) {
   return (
     <section className="cart-section">
       {carrito.length > 0 && (
@@ -13,21 +14,34 @@ function Cart({ carrito, totalQty, totalPrice }) {
               <CartProductCardContainer key={item.id} item={item} />
             ))}
           </section>
-          <section className="cart-detail">
-            <h2>Resumen del carrito</h2>
-            <table>
-              <tr>
-                <td>Cantidad de productos</td>
-                <td>{totalQty}</td>
-              </tr>
-              <tr className="precio-final">
-                <td>TOTAL</td>
-                <td>${totalPrice}</td>
-              </tr>
-            </table>
-            <Link to={"/checkout"} className="btn-continuar-compra">
-              <Button variant="contained">Continuar compra</Button>
-            </Link>
+          <section>
+            <div className="cart-detail">
+              <section className="cart-resume">
+                <h2>Resumen del carrito</h2>
+                <table>
+                  <tr>
+                    <td>Cantidad de productos</td>
+                    <td>{totalQty}</td>
+                  </tr>
+                  <tr className="precio-final">
+                    <td>TOTAL</td>
+                    <td>${totalPrice}</td>
+                  </tr>
+                </table>
+                <Link to={"/checkout"} className="btn-continuar-compra">
+                  <Button variant="contained">Continuar compra</Button>
+                </Link>
+              </section>
+              <Button
+                variant="contained"
+                color="tertiary"
+                onClick={clearCart}
+                className="clear-cart-btn"
+                sx={{ color: "white" }}
+              >
+                <RemoveShoppingCartIcon /> <span>Vaciar carrito</span>
+              </Button>
+            </div>
           </section>
         </>
       )}

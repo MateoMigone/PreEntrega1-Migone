@@ -1,4 +1,7 @@
 import { createContext, useState } from "react";
+import Swal from "sweetalert2";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 export const CartContext = createContext();
 
@@ -20,11 +23,29 @@ const CartContextComponent = ({ children }) => {
     );
     setCart(newArr);
     localStorage.setItem("cart", JSON.stringify(newArr));
+    Toastify({
+      text: `Se modificó la cantidad de ${product.title} a (${product.quantity}) en tu carrito de compras!`,
+      position: "right",
+      gravity: "bottom",
+      duration: 3000,
+      style: {
+        background: "linear-gradient(to right, #eb9336, #bfbd21)",
+      },
+    }).showToast();
   };
 
   const addProduct = (product) => {
     setCart([...cart, product]);
     localStorage.setItem("cart", JSON.stringify([...cart, product]));
+    Toastify({
+      text: `Se agregó ${product.title} (x${product.quantity}) a tu carrito de compras!`,
+      position: "right",
+      gravity: "bottom",
+      duration: 3000,
+      style: {
+        background: "linear-gradient(to right, #00b09b, #16e05b)",
+      },
+    }).showToast();
   };
 
   const getTotalQty = () => {
@@ -47,6 +68,28 @@ const CartContextComponent = ({ children }) => {
     let filteredArray = cart.filter((product) => product.id !== id);
     setCart(filteredArray);
     localStorage.setItem("cart", JSON.stringify(filteredArray));
+    Toastify({
+      text: `Se eliminaron los productos del carrito de compras!`,
+      position: "right",
+      gravity: "bottom",
+      duration: 3000,
+      style: {
+        background: "linear-gradient(to right, #d92525, #eb9336)",
+      },
+    }).showToast();
+  };
+
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem("cart");
+
+    Swal.fire({
+      position: "center",
+      icon: "warning",
+      title: "Se vació correctamente el carrito!",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   };
 
   let data = {
@@ -55,6 +98,7 @@ const CartContextComponent = ({ children }) => {
     getTotalQty,
     getTotalPrice,
     deleteProductFromCartById,
+    clearCart,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

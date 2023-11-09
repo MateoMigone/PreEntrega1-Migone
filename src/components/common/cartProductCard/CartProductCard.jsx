@@ -38,12 +38,22 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
                 >
                   {item.title}
                 </Typography>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography variant="overline" component="div">
+                <Box sx={{ display: "flex", gap: "4rem" }}>
+                  <Typography
+                    variant="overline"
+                    component="div"
+                    className="tag-detail"
+                    sx={{ fontWeight: "bold" }}
+                  >
                     Precio: ${item.price}
                   </Typography>
-                  <Typography variant="overline" component="div">
-                    Cantidad:{item.quantity}
+                  <Typography
+                    variant="overline"
+                    component="div"
+                    className="tag-detail"
+                    sx={{ fontWeight: "bold" }}
+                  >
+                    Cantidad: {item.quantity}
                   </Typography>
                 </Box>
               </CardContent>

@@ -4,6 +4,12 @@
   gap: 2rem;
 }
 
+.tag-detail {
+  background-color: rgb(246, 215, 189);
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+}
+
 .delete-icon {
   background: none;
   border: none;
