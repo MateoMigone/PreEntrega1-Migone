@@ -3,6 +3,7 @@ import CartProductCardContainer from "../../common/cartProductCard/CartProductCa
 import "./cart.css";
 import { Button } from "@mui/material";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import StoreIcon from "@mui/icons-material/Store";
 
 function Cart({ carrito, totalQty, totalPrice, clearCart }) {
   return (
@@ -58,7 +59,7 @@ function Cart({ carrito, totalQty, totalPrice, clearCart }) {
               color="secondary"
               sx={{ fontSize: "1.2rem", color: "white" }}
             >
-              Ir a la tienda
+              <StoreIcon sx={{ marginRight: "1rem" }} /> Ir a la tienda
             </Button>
           </Link>
         </div>

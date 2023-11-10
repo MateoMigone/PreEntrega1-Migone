@@ -13,30 +13,6 @@ const CartContextComponent = ({ children }) => {
   const updateCart = (product) => {
     let exists = cart.some((productInCart) => productInCart.id === product.id);
     exists ? updateProduct(product) : addProduct(product);
-  };
-
-  const updateProduct = (product) => {
-    let newArr = cart.map((productInCart) =>
-      productInCart.id === product.id
-        ? { ...productInCart, quantity: product.quantity }
-        : productInCart
-    );
-    setCart(newArr);
-    localStorage.setItem("cart", JSON.stringify(newArr));
-    Toastify({
-      text: `Se modificó la cantidad de ${product.title} a (${product.quantity}) en tu carrito de compras!`,
-      position: "right",
-      gravity: "bottom",
-      duration: 3000,
-      style: {
-        background: "linear-gradient(to right, #eb9336, #bfbd21)",
-      },
-    }).showToast();
-  };
-
-  const addProduct = (product) => {
-    setCart([...cart, product]);
-    localStorage.setItem("cart", JSON.stringify([...cart, product]));
     Toastify({
       text: `Se agregó ${product.title} (x${product.quantity}) a tu carrito de compras!`,
       position: "right",
@@ -46,6 +22,23 @@ const CartContextComponent = ({ children }) => {
         background: "linear-gradient(to right, #00b09b, #16e05b)",
       },
     }).showToast();
+  };
+
+  const updateProduct = (product) => {
+    let newArr = cart.map(
+      (productInCart) =>
+        productInCart.id === product.id && {
+          ...productInCart,
+          quantity: productInCart.quantity + product.quantity,
+        }
+    );
+    setCart(newArr);
+    localStorage.setItem("cart", JSON.stringify(newArr));
+  };
+
+  const addProduct = (product) => {
+    setCart([...cart, product]);
+    localStorage.setItem("cart", JSON.stringify([...cart, product]));
   };
 
   const getTotalQty = () => {
@@ -92,6 +85,10 @@ const CartContextComponent = ({ children }) => {
     });
   };
 
+  const findProductInCart = (id) => {
+    return cart.find((product) => product.id === id);
+  };
+
   let data = {
     cart,
     updateCart,
@@ -99,6 +96,7 @@ const CartContextComponent = ({ children }) => {
     getTotalPrice,
     deleteProductFromCartById,
     clearCart,
+    findProductInCart,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

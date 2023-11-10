@@ -3,7 +3,7 @@ import ProductCardContainer from "../../common/productCard/ProductCardContainer"
 import "./itemList.css";
 import CircleIcon from "@mui/icons-material/Circle";
 
-const ItemList = ({ items, categoryName, change }) => {
+const ItemList = ({ items, categoryName, categoryChange }) => {
   return (
     <section className="item-list-container">
       <div className="item-list-title">
@@ -15,7 +15,7 @@ const ItemList = ({ items, categoryName, change }) => {
         </p>
       </div>
       <div className="item-list-content">
-        {items.length === 0 || change ? (
+        {items.length === 0 || categoryChange ? (
           <>
             <h3>
               <Skeleton variant="text" width={350} height={50} />
