@@ -1,8 +1,27 @@
-# React + Vite
+# Te doy la bienvenida a mi ecommerce "FUTBOL-RETRO"!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el proyecto que realice a lo largo de mi cursada de React JS en coderhouse.
 
-Currently, two official plugins are available:
+A continuación encontrarás el detalle de todas las herramientas y recursos utilizados:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Lenguajes
+
+- HTML
+- CSS
+- JAVASCRIPT
+
+### Framework
+
+- REACT JS
+
+### Librerias
+
+- MATERIAL UI
+- SWEET ALERT
+- TOASTIFY
+- FORMIK
+- YUP
+
+# Base de datos
+
+- Firebase
