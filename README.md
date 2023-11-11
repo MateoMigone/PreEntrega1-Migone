@@ -1,5 +1,6 @@
-# Te doy la bienvenida a mi ecommerce "FUTBOL-RETRO"!
+# FUTBOL RETRO
 
+Te doy la bienvenida a mi ecommerce "Futbol retro"!
 Este es el proyecto que realice a lo largo de mi cursada de React JS en coderhouse.
 
 A continuación encontrarás el detalle de todas las herramientas y recursos utilizados:
@@ -22,6 +23,6 @@ A continuación encontrarás el detalle de todas las herramientas y recursos uti
 - FORMIK
 - YUP
 
-# Base de datos
+### Base de datos
 
 - Firebase
