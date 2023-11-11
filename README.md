@@ -17,12 +17,12 @@ A continuación encontrarás el detalle de todas las herramientas y recursos uti
 
 ### Librerias
 
-- MATERIAL UI
-- SWEET ALERT
-- TOASTIFY
-- FORMIK
-- YUP
+- [MATERIAL UI](https://mui.com/)
+- [SWEET ALERT](https://sweetalert2.github.io/)
+- [TOASTIFY](https://apvarun.github.io/toastify-js/)
+- [FORMIK](https://formik.org/)
+- [YUP](https://www.npmjs.com/package/yup)
 
 ### Base de datos
 
-- Firebase
+- FIREBASE
