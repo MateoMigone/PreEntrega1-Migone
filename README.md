@@ -13,7 +13,7 @@ A continuación encontrarás el detalle de todas las herramientas y recursos uti
 
 ### Framework
 
-- REACT JS
+- REACT JS + VITE
 
 ### Librerias
 
