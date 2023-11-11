@@ -25,3 +25,23 @@
   cursor: pointer;
   background-color: rgba(255, 232, 212, 0.6);
 }
+
+@media (max-width: 1199px) {
+  .cart-card-container {
+    gap: 1rem;
+  }
+
+  .tag-detail {
+    padding: 0.15rem 0.8rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .cart-card-container {
+    gap: 0.5rem;
+  }
+
+  .tag-detail {
+    padding: 0.15rem 0.5rem;
+  }
+}

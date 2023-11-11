@@ -52,15 +52,17 @@
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-}
-
-.cart-resume td {
-  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px #0d572c;
 }
 
 .cart-resume h2 {
   text-align: center;
   border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.cart-resume td {
+  padding: 1rem;
 }
 
 .precio-final {
@@ -75,4 +77,67 @@
 .clear-cart-btn {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 1535px) {
+  .cart-section {
+    gap: 3rem;
+  }
+
+  .empty-cart-container {
+    margin: 3rem;
+  }
+
+  .empty-cart-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .empty-cart-container {
+    margin: 0;
+  }
+
+  .cart-detail {
+    gap: 2.5rem;
+  }
+
+  .cart-resume {
+    width: 275px;
+    gap: 1rem;
+  }
+
+  .cart-resume h2 {
+    font-size: 1.4rem;
+  }
+
+  .cart-resume td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .cart-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .empty-cart-container {
+    padding: 3.5rem;
+  }
+
+  .cart-detail {
+    position: inherit;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 599px) {
+  .empty-cart-container {
+    padding: 0;
+    margin: 14rem 0;
+  }
 }

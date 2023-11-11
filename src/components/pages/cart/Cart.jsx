@@ -30,7 +30,16 @@ function Cart({ carrito, totalQty, totalPrice, clearCart }) {
                   </tr>
                 </table>
                 <Link to={"/checkout"} className="btn-continuar-compra">
-                  <Button variant="contained">Continuar compra</Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                      color: "white",
+                      fontSize: { sm: "0.8rem", lg: "1rem" },
+                    }}
+                  >
+                    Continuar compra
+                  </Button>
                 </Link>
               </section>
               <Button
@@ -38,7 +47,7 @@ function Cart({ carrito, totalQty, totalPrice, clearCart }) {
                 color="tertiary"
                 onClick={clearCart}
                 className="clear-cart-btn"
-                sx={{ color: "white" }}
+                sx={{ color: "white", fontSize: { sm: "0.8rem", lg: "1rem" } }}
               >
                 <RemoveShoppingCartIcon /> <span>Vaciar carrito</span>
               </Button>
@@ -57,7 +66,7 @@ function Cart({ carrito, totalQty, totalPrice, clearCart }) {
             <Button
               variant="contained"
               color="secondary"
-              sx={{ fontSize: "1.2rem", color: "white" }}
+              sx={{ fontSize: { md: "1rem", lg: "1.2rem" }, color: "white" }}
             >
               <StoreIcon sx={{ marginRight: "1rem" }} /> Ir a la tienda
             </Button>

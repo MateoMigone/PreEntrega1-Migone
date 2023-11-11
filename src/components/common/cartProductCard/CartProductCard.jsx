@@ -19,7 +19,7 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              width: 900,
+              width: { xs: 320, sm: 480, lg: 650, xl: 900 },
               color: "black",
             }}
           >
@@ -28,22 +28,28 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: 4,
+                  gap: { xs: 2.5, lg: 4 },
                 }}
               >
                 <Typography
                   component="div"
                   variant="h5"
-                  sx={{ borderBottom: "1px solid rgb(175, 175, 175)" }}
+                  sx={{
+                    borderBottom: "1px solid rgb(175, 175, 175)",
+                    fontSize: { xs: "0.7rem", sm: "1rem", lg: "1.5rem" },
+                  }}
                 >
                   {item.title}
                 </Typography>
-                <Box sx={{ display: "flex", gap: "4rem" }}>
+                <Box sx={{ display: "flex", gap: "0.8rem" }}>
                   <Typography
                     variant="overline"
                     component="div"
                     className="tag-detail"
-                    sx={{ fontWeight: "bold" }}
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: { xs: "0.5rem", sm: "0.6rem", lg: "0.75rem" },
+                    }}
                   >
                     Precio: ${item.price}
                   </Typography>
@@ -51,7 +57,10 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
                     variant="overline"
                     component="div"
                     className="tag-detail"
-                    sx={{ fontWeight: "bold" }}
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: { xs: "0.5rem", sm: "0.6rem", lg: "0.75rem" },
+                    }}
                   >
                     Cantidad: {item.quantity}
                   </Typography>
@@ -60,9 +69,13 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
             </Box>
             <CardMedia
               component="img"
-              sx={{ width: 130, height: 130, padding: 1.5 }}
+              sx={{
+                width: { xs: 100, sm: 110, lg: 130 },
+                height: { xs: 100, sm: 110, lg: 130 },
+                padding: 1.5,
+              }}
               image={item.img}
-              alt="Live from space album cover"
+              alt={item.title}
             />
           </CardActionArea>
         </Link>
@@ -71,7 +84,10 @@ const CartProductCard = ({ item, deleteProductFromCart }) => {
         className="delete-icon"
         onClick={() => deleteProductFromCart(item.id)}
       >
-        <DeleteIcon color="secondary" sx={{ fontSize: "50px" }} />
+        <DeleteIcon
+          color="secondary"
+          sx={{ fontSize: { xs: "35px", sm: "40px", lg: "50px" } }}
+        />
       </button>
     </div>
   );

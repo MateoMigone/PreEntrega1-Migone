@@ -38,8 +38,8 @@ const CheckoutContainer = () => {
       Swal.fire({
         title: "Estás seguro de que quieres finalizar la compra?",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#1d9e49",
+        cancelButtonColor: "#d92525",
         confirmButtonText: "Si, estoy seguro",
         cancelButtonText: "Cancelar",
       }).then((result) => {

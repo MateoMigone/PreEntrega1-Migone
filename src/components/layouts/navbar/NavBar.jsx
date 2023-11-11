@@ -25,12 +25,20 @@ const NavBar = () => {
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
+                fontSize: { xs: "14px", sm: "18px", md: "24px" },
               }}
             >
               FUTB
-              <SportsSoccerIcon sx={{ fontSize: "22px", mr: 0.5 }} />
+              <SportsSoccerIcon
+                sx={{
+                  fontSize: { xs: "14px", sm: "18px", md: "24px" },
+                  mr: 0.5,
+                }}
+              />
               L RETR
-              <SportsSoccerIcon sx={{ fontSize: "22px", mr: 0.5 }} />
+              <SportsSoccerIcon
+                sx={{ fontSize: { xs: "14px", sm: "18px", md: "24px" } }}
+              />
             </Typography>
           </Link>
           <Box
@@ -38,8 +46,8 @@ const NavBar = () => {
               flexGrow: 1,
               display: "flex",
               justifyContent: "end",
-              gap: "1rem",
-              marginRight: "100px",
+              gap: { xs: 0, sm: "1rem" },
+              marginRight: { xs: 0, sm: "20px", md: "100px" },
             }}
           >
             <Link to="/">
@@ -47,12 +55,12 @@ const NavBar = () => {
                 sx={{
                   my: 2,
                   color: "white",
-                  display: "block",
-                  fontSize: { sm: "9px", md: "12px", lg: "18px" },
+                  fontSize: { xs: "10px", sm: "15px", lg: "18px" },
+                  paddingLeft: 0,
+                  paddingRight: 0,
                 }}
               >
-                {" "}
-                Todos{" "}
+                Todos
               </Button>
             </Link>
             <Link to="/category/sudamerica">
@@ -60,12 +68,12 @@ const NavBar = () => {
                 sx={{
                   my: 2,
                   color: "white",
-                  display: "block",
-                  fontSize: { sm: "9px", md: "12px", lg: "18px" },
+                  fontSize: { xs: "10px", sm: "15px", lg: "18px" },
+                  paddingLeft: 0,
+                  paddingRight: 0,
                 }}
               >
-                {" "}
-                Sudamérica{" "}
+                Sudamérica
               </Button>
             </Link>
             <Link to="/category/europa">
@@ -73,12 +81,12 @@ const NavBar = () => {
                 sx={{
                   my: 2,
                   color: "white",
-                  display: "block",
-                  fontSize: { sm: "9px", md: "12px", lg: "18px" },
+                  fontSize: { xs: "10px", sm: "15px", lg: "18px" },
+                  paddingLeft: 0,
+                  paddingRight: 0,
                 }}
               >
-                {" "}
-                Europa{" "}
+                Europa
               </Button>
             </Link>
           </Box>

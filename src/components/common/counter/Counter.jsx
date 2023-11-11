@@ -15,7 +15,7 @@ const Counter = ({ qty, increase, decrease, addToCart, stock, qtyInCart }) => {
           className="rmvIcon"
           aria-label="decrease"
         >
-          <RemoveIcon />
+          <RemoveIcon sx={{ fontSize: "1.2rem" }} />
         </IconButton>
         {qty}
         <IconButton
@@ -24,20 +24,28 @@ const Counter = ({ qty, increase, decrease, addToCart, stock, qtyInCart }) => {
           aria-label="increase"
           disabled={stock === qty + qtyInCart || stock === qtyInCart}
         >
-          <AddIcon />
+          <AddIcon sx={{ fontSize: "1.2rem" }} />
         </IconButton>
       </div>
       <Button
-        size="large"
         color="secondary"
         variant="contained"
-        sx={{ color: "white" }}
+        sx={{
+          color: "white",
+          fontSize: { sm: "0.6rem", md: "0.8rem", lg: "0.9rem", xl: "1rem" },
+        }}
         onClick={() => {
           addToCart(qty);
         }}
         disabled={stock <= qtyInCart}
       >
-        <AddShoppingCartIcon sx={{ marginRight: "1rem" }} /> Agregar al carrito
+        <AddShoppingCartIcon
+          sx={{
+            marginRight: "1rem",
+            fontSize: "1.2rem",
+          }}
+        />
+        Agregar al carrito
       </Button>
     </section>
   );

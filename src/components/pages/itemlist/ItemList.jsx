@@ -18,17 +18,71 @@ const ItemList = ({ items, categoryName, categoryChange }) => {
         {items.length === 0 || categoryChange ? (
           <>
             <h3>
-              <Skeleton variant="text" width={350} height={50} />
+              <Skeleton
+                variant="text"
+                sx={{
+                  width: { xs: 300, sm: 357, lg: 445 },
+                  height: { xs: 80, sm: 56, lg: 65 },
+                }}
+              />
             </h3>
             <div className="product-cards-container">
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
-              <Skeleton variant="rectangular" width={345} height={391.2} />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
+              <Skeleton
+                variant="rectangular"
+                sx={{
+                  width: { xs: 268, sm: 175, lg: 200, xl: 345 },
+                  height: { xs: 336.5, xl: 391.5 },
+                }}
+              />
             </div>
           </>
         ) : (
